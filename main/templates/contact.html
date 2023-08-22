@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content%}
+<div class="slides">
+    <div class="slide" id="contact">
+        <!-- How to change your own map point
+        1. Go to Google Maps
+        2. Click on your location point
+        3. Click "Share" and choose "Embed map" tab
+        4. Copy only URL and paste it within the src="" field below
+    -->
+        <div class="content fifth-content">
+            <div class="container-fluid">
+                <div class="col-md-6">
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17310.009592317307!2d83.22764758132912!3d17.74028474043698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a396874cd6823ef%3A0xf67c018d7ee24c7c!2sPEARL%20RESIDENCY%20III!5e0!3m2!1sen!2sin!4v1691641086994!5m2!1sen!2sin" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id = "contact" style="vertical-align: center;">
+                        <div >
+                            <div class="col-md-12">
+                                <fieldset style="margin: 15px 15px 15px 15px;">
+                                    <a href="https://www.linkedin.com/in/sasidharpanthagada">
+                                        <button type="submit" id="form-submit" class="btn"><i class="fa fa-linkedin"></i> Linkedin</button>
+                                    </a>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset style="margin: 15px 15px 15px 15px;">
+                                    <a href="mailto:panthagadasasidhar@gmail.com">
+                                        <button type="submit" id="form-submit" class="btn"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email me</button>
+                                    </a>
+                                    
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset style="margin: 15px 15px 15px 15px;">
+                                    <a href="https://github.com/Sasidhar505"><button type="submit" id="form-submit" class="btn"><i class="fa fa-github" aria-hidden="true"></i> Github</button></a>
+                                    
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset style="margin: 15px 15px 15px 15px;">
+                                    <a href="https://instagram.com/sasidharpanthagada?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><button type="submit" id="form-submit" class="btn"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</button></a>
+                                    
+                                </fieldset>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+
+{% endblock %}

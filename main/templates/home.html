@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="slides">
+    <div class="slide" id="home">
+        <div class="content first-content">
+          <div class="container-fluid">
+              <div class="col-md-3">
+                  <div class="author-image"><img src="{% static 'img/SD.png' %}" alt="Author Image"></div>
+              </div>
+              <div class="col-md-9">
+                  <h2>SASIDHAR PANTHAGADA</h2>
+                  <p>Welcome to my portfolio—a fusion of artistry and technology. Here, you'll uncover an array of projects that blend seamless design with interactive innovation. I invite you to explore this digital canvas I've crafted, where each piece tells a unique story. Whether you're a fellow explorer of the digital realm, a potential collaborator, or simply curious about the creative process, I'm thrilled to share my vision with you. Thank you for being here!</p>
+                  <div class="main-btn"><a href="{% url 'about' %}">Read More</a></div>
+                  <div class="fb-btn"><a rel="nofollow" href="https://drive.google.com/file/d/1ksqGM_KmpYEZ1U7xmCabpqbtiS5WBxR-/view?usp=sharing">My Resume</a></div>
+              </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}
