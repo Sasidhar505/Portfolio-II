@@ -1,10 +1,14 @@
-FROM python:3.11.4
+
+FROM python:311..4
 
 WORKDIR /Portfolio
 
 COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
+
+# Install gunicorn package
+RUN pip install gunicorn
 
 COPY . .
 
