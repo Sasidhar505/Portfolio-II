@@ -262,10 +262,7 @@ nav a:hover::before {
 .slides {
   width: 600vw;
   height: 100vh;
-  -webkit-transition: -webkit-transform 0.8s ease;
-  transition: -webkit-transform 0.8s ease;
-  transition: transform 0.8s ease;
-  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+
 }
 .slides .slide {
   height: 100vh;
