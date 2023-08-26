@@ -16,78 +16,6 @@ https://templatemo.com/tm-512-moonlight
   }
 }
 
-.seq-preloader {
-  background: white;
-  visibility: visible;
-  opacity: 1;
-  position: absolute;
-  z-index: 9999;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.seq-preloader.seq-preloaded {
-  opacity: 0;
-  visibility: hidden;
-  transition: visibility 0s .5s, opacity .5s;
-}
-
-.seq-preload-indicator {
-  overflow: visible;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.seq-preload-circle {
-  display: inline-block;
-  height: 12px;
-  width: 12px;
-  fill: #7a7a7a;
-  opacity: 0;
-  animation: seq-preloader 1.25s infinite;
-}
-
-.seq-preload-circle-2 {
-  animation-delay: .15s;
-}
-
-.seq-preload-circle-3 {
-  animation-delay: .3s;
-}
-
-.seq-preload-indicator-fallback {
-  width: 42px;
-  overflow: visible;
-}
-
-.seq-preload-indicator-fallback .seq-preload-circle {
-  width: 8px;
-  height:8px;
-  background-color: #f4f4f4;
-  border-radius: 100%;
-  opacity: 1;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.seq-preload-indicator-fallback .seq-preload-circle-2 {
-  margin-left: 3px;
-  margin-right: 3px;
-  width: 12px;
-  height: 12px;
-}
-
-.seq-preload-indicator-fallback .seq-preload-circle-3 {
-  width: 16px;
-  height: 16px;
-}
-
 
 /* MAIN CSS */
 
@@ -262,7 +190,10 @@ nav a:hover::before {
 .slides {
   width: 600vw;
   height: 100vh;
-
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
 }
 .slides .slide {
   height: 100vh;
@@ -634,7 +565,6 @@ nav a:hover::before {
 
 .fifth-content #contact {
 	padding: 50px 50px 50px 50px;
-	align-items: center;
 }
 
 .fifth-content input {
@@ -685,36 +615,11 @@ nav a:hover::before {
 	background-color: transparent;
 	border-radius: 0px;
 	transition: all 0.5s;
-	margin-bottom: 25px;
 }
-
-
 
 .fifth-content button:hover {
 	color: #232323;
 	background-color: #fff;
-}
-
-.fifth-content .fb-btn {
-	display: inline-block;
-}
-
-.fifth-content .fb-btn a {
-	display: inline-block;
-	background-color: #fff;
-	border: 2px solid #fff;
-	padding: 8px 15px;
-	font-size: 13px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: #232323;
-	text-decoration: none;
-	transition: all 0.5s;
-}
-
-.fifth-content .fb-btn a:hover {
-	color: #fff;
-	background-color: transparent;
 }
 
 .footer .content {
@@ -738,7 +643,6 @@ nav a:hover::before {
 	color: #aaa;
 	text-decoration: none;
 }
-
 
 
 

@@ -38,17 +38,35 @@ https://templatemo.com/tm-512-moonlight
           </div>
           
           <ul>
-            <li><a href="{% url 'home' %}"><i class="fa fa-home"></i> <em>Home</em></a></li>
-            <li><a href="{% url 'about' %}"><i class="fa fa-user"></i> <em>About</em></a></li>
-            <li><a href="{% url 'skills' %}"><i class="fa fa-pencil"></i> <em>Skills</em></a></li>
-            <li><a href="{% url 'works' %}"><i class="fa fa-image"></i> <em>Works</em></a></li>
-            <li><a href="{% url 'contact' %}"><i class="fa fa-envelope"></i> <em>Contact</em></a></li>
+            <li><a href="{% url 'index' %}?item=1" ><i class="fa fa-home" ></i> <em>Home</em></a></li>
+            <li><a href="{% url 'index' %}?item=2"><i class="fa fa-user"></i> <em>About</em></a></li>
+            <li><a href="{% url 'index' %}?item=3"><i class="fa fa-pencil"></i> <em>Skills</em></a></li>
+            <li><a href="{% url 'index' %}?item=4"><i class="fa fa-image"></i> <em>Works</em></a></li>
+            <li><a href="{% url 'index' %}?item=5"><i class="fa fa-envelope"></i> <em>Contact</em></a></li>
           </ul>
         </nav>
-        {% block content%}{% endblock %}
+        
+            
+        
+        
+        
+        <!-- {% block content %}{% endblock %} -->
         <div class="slides">
-            <div class="slide">
-
+            <div class="slide" >
+                
+                {% if selected_item == "1" or selected_item == "default" %}
+                    {% include 'home.html' %}
+                {% elif selected_item == "2" %}
+                    {% include 'about.html' %}
+                {% elif selected_item == "3" %}
+                    {% include 'skills.html' %}
+                {% elif selected_item == "4" %}
+                    {% include 'works.html' %}
+                {% elif selected_item == "5" %}
+                    {% include 'contact.html' %}
+                {% else %}
+                    <h1>this shit aint working</h1>
+                {% endif %}
             </div>
         </div>
         
@@ -59,13 +77,12 @@ https://templatemo.com/tm-512-moonlight
           </div>
         </div>
  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write("<script src='{% static 'js/vendor/jquery-1.11.2.min.js' %}'><\/script>")</script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+    <!-- <script>window.jQuery || document.write("<script src='{% static 'js/vendor/jquery-1.11.2.min.js' %}'><\/script>")</script> -->
 
     <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
     
     <script src="{% static 'js/datepicker.js' %}"></script>
-    <script src="{% static 'js/plugins.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 
     <!-- <script type="text/javascript">

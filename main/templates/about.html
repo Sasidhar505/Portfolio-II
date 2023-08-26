@@ -1,8 +1,8 @@
-{% extends 'index.html' %}
+
 
 {% load static %}
 
-{% block content%}
+
 <div class="slides">
     <div class="slide" id="about">
         <div class="content second-content">
@@ -14,7 +14,7 @@
                         <p>Beyond coding, I'm an avid machine learning enthusiast. Delving into the world of AI and data science, I find joy in unraveling patterns and insights from data. From predictive models to natural language processing, I believe in the power of algorithms to shape a smarter future.</p>
                         <p>With over four years of immersive experience in the realm of 3D artistry, I've shaped immersive virtual realms that blur the line between imagination and reality. My journey in 3D design, which spans architectural visualization to character modeling, is fueled by an eye for detail and a passion for storytelling</p>
                         <p>In essence, I'm a creative technologist—a Python developer, a machine learning explorer, a 3D virtuoso, and a graphic design maestro. This diverse skill set allows me to weave innovation into every project I undertake. I'm excited to collaborate, learn, and bring visions to life in ways that span across code, data, design, and beyond.</p>
-                      <div class="main-btn"><a href="{% url 'skills' %}">Read More</a></div>
+                      <div class="main-btn"><a href="{% url 'index' %}?item=3">Read More</a></div>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -27,4 +27,3 @@
       </div>
 </div>
 
-{% endblock %}
