@@ -1,14 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Ma_Works
+# from .models import Ma_Works
 from django.template.loader import render_to_string
 # Create your views here.
 
 
 def index(request ):
     selected_item = request.GET.get('item', 'default')
-    works = Ma_Works.objects.all()
-    data = {'works': works , 'selected_item': selected_item}
+    
+    data = { 'selected_item': selected_item}
     print(request.GET)
     return render(request, 'index.html' , data )
 
